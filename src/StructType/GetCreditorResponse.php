@@ -20,33 +20,33 @@ class GetCreditorResponse extends AbstractStructBase
      * - maxOccurs: 1
      * - minOccurs: 0
      * - ref: MidocoCreditor
-     * @var \Pggns\MidocoApi\Crm\StructType\CreditorDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCreditor|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\CreditorDTO $MidocoCreditor = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoCreditor $MidocoCreditor = null;
     /**
      * Constructor method for GetCreditorResponse
      * @uses GetCreditorResponse::setMidocoCreditor()
-     * @param \Pggns\MidocoApi\Crm\StructType\CreditorDTO $midocoCreditor
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCreditor $midocoCreditor
      */
-    public function __construct(?\Pggns\MidocoApi\Crm\StructType\CreditorDTO $midocoCreditor = null)
+    public function __construct(?\Pggns\MidocoApi\Crm\StructType\MidocoCreditor $midocoCreditor = null)
     {
         $this
             ->setMidocoCreditor($midocoCreditor);
     }
     /**
      * Get MidocoCreditor value
-     * @return \Pggns\MidocoApi\Crm\StructType\CreditorDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCreditor|null
      */
-    public function getMidocoCreditor(): ?\Pggns\MidocoApi\Crm\StructType\CreditorDTO
+    public function getMidocoCreditor(): ?\Pggns\MidocoApi\Crm\StructType\MidocoCreditor
     {
         return $this->MidocoCreditor;
     }
     /**
      * Set MidocoCreditor value
-     * @param \Pggns\MidocoApi\Crm\StructType\CreditorDTO $midocoCreditor
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCreditor $midocoCreditor
      * @return \Pggns\MidocoApi\Crm\StructType\GetCreditorResponse
      */
-    public function setMidocoCreditor(?\Pggns\MidocoApi\Crm\StructType\CreditorDTO $midocoCreditor = null): self
+    public function setMidocoCreditor(?\Pggns\MidocoApi\Crm\StructType\MidocoCreditor $midocoCreditor = null): self
     {
         $this->MidocoCreditor = $midocoCreditor;
         

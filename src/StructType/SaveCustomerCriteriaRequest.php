@@ -36,20 +36,30 @@ class SaveCustomerCriteriaRequest extends AbstractStructBase
      */
     protected ?int $internalVersion = null;
     /**
+     * The preventCheckSaveCustomerAttribute
+     * Meta information extracted from the WSDL
+     * - default: false
+     * @var bool|null
+     */
+    protected ?bool $preventCheckSaveCustomerAttribute = null;
+    /**
      * Constructor method for SaveCustomerCriteriaRequest
      * @uses SaveCustomerCriteriaRequest::setMidocoCustomerId()
      * @uses SaveCustomerCriteriaRequest::setMidocoCrmCriteria()
      * @uses SaveCustomerCriteriaRequest::setInternalVersion()
+     * @uses SaveCustomerCriteriaRequest::setPreventCheckSaveCustomerAttribute()
      * @param \Pggns\MidocoApi\Crm\StructType\CustomerIdDTO $midocoCustomerId
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCriteria[] $midocoCrmCriteria
      * @param int $internalVersion
+     * @param bool $preventCheckSaveCustomerAttribute
      */
-    public function __construct(?\Pggns\MidocoApi\Crm\StructType\CustomerIdDTO $midocoCustomerId = null, ?array $midocoCrmCriteria = null, ?int $internalVersion = null)
+    public function __construct(?\Pggns\MidocoApi\Crm\StructType\CustomerIdDTO $midocoCustomerId = null, ?array $midocoCrmCriteria = null, ?int $internalVersion = null, ?bool $preventCheckSaveCustomerAttribute = false)
     {
         $this
             ->setMidocoCustomerId($midocoCustomerId)
             ->setMidocoCrmCriteria($midocoCrmCriteria)
-            ->setInternalVersion($internalVersion);
+            ->setInternalVersion($internalVersion)
+            ->setPreventCheckSaveCustomerAttribute($preventCheckSaveCustomerAttribute);
     }
     /**
      * Get MidocoCustomerId value
@@ -157,6 +167,29 @@ class SaveCustomerCriteriaRequest extends AbstractStructBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($internalVersion, true), gettype($internalVersion)), __LINE__);
         }
         $this->internalVersion = $internalVersion;
+        
+        return $this;
+    }
+    /**
+     * Get preventCheckSaveCustomerAttribute value
+     * @return bool|null
+     */
+    public function getPreventCheckSaveCustomerAttribute(): ?bool
+    {
+        return $this->preventCheckSaveCustomerAttribute;
+    }
+    /**
+     * Set preventCheckSaveCustomerAttribute value
+     * @param bool $preventCheckSaveCustomerAttribute
+     * @return \Pggns\MidocoApi\Crm\StructType\SaveCustomerCriteriaRequest
+     */
+    public function setPreventCheckSaveCustomerAttribute(?bool $preventCheckSaveCustomerAttribute = false): self
+    {
+        // validation for constraint: boolean
+        if (!is_null($preventCheckSaveCustomerAttribute) && !is_bool($preventCheckSaveCustomerAttribute)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($preventCheckSaveCustomerAttribute, true), gettype($preventCheckSaveCustomerAttribute)), __LINE__);
+        }
+        $this->preventCheckSaveCustomerAttribute = $preventCheckSaveCustomerAttribute;
         
         return $this;
     }

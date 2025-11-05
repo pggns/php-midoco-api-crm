@@ -20,13 +20,13 @@ class GetMidocoAttributeDefinitionResponse extends AbstractStructBase
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * - ref: MidocoSystemAttributeDefinition
-     * @var \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO[]
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition[]
      */
     protected ?array $MidocoSystemAttributeDefinition = null;
     /**
      * Constructor method for GetMidocoAttributeDefinitionResponse
      * @uses GetMidocoAttributeDefinitionResponse::setMidocoSystemAttributeDefinition()
-     * @param \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO[] $midocoSystemAttributeDefinition
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition[] $midocoSystemAttributeDefinition
      */
     public function __construct(?array $midocoSystemAttributeDefinition = null)
     {
@@ -35,7 +35,7 @@ class GetMidocoAttributeDefinitionResponse extends AbstractStructBase
     }
     /**
      * Get MidocoSystemAttributeDefinition value
-     * @return \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO[]
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition[]
      */
     public function getMidocoSystemAttributeDefinition(): ?array
     {
@@ -57,12 +57,12 @@ class GetMidocoAttributeDefinitionResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getMidocoAttributeDefinitionResponseMidocoSystemAttributeDefinitionItem) {
             // validation for constraint: itemType
-            if (!$getMidocoAttributeDefinitionResponseMidocoSystemAttributeDefinitionItem instanceof \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO) {
+            if (!$getMidocoAttributeDefinitionResponseMidocoSystemAttributeDefinitionItem instanceof \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition) {
                 $invalidValues[] = is_object($getMidocoAttributeDefinitionResponseMidocoSystemAttributeDefinitionItem) ? get_class($getMidocoAttributeDefinitionResponseMidocoSystemAttributeDefinitionItem) : sprintf('%s(%s)', gettype($getMidocoAttributeDefinitionResponseMidocoSystemAttributeDefinitionItem), var_export($getMidocoAttributeDefinitionResponseMidocoSystemAttributeDefinitionItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The MidocoSystemAttributeDefinition property can only contain items of type \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The MidocoSystemAttributeDefinition property can only contain items of type \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -71,7 +71,7 @@ class GetMidocoAttributeDefinitionResponse extends AbstractStructBase
     /**
      * Set MidocoSystemAttributeDefinition value
      * @throws InvalidArgumentException
-     * @param \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO[] $midocoSystemAttributeDefinition
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition[] $midocoSystemAttributeDefinition
      * @return \Pggns\MidocoApi\Crm\StructType\GetMidocoAttributeDefinitionResponse
      */
     public function setMidocoSystemAttributeDefinition(?array $midocoSystemAttributeDefinition = null): self
@@ -87,14 +87,14 @@ class GetMidocoAttributeDefinitionResponse extends AbstractStructBase
     /**
      * Add item to MidocoSystemAttributeDefinition value
      * @throws InvalidArgumentException
-     * @param \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO $item
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition $item
      * @return \Pggns\MidocoApi\Crm\StructType\GetMidocoAttributeDefinitionResponse
      */
-    public function addToMidocoSystemAttributeDefinition(\Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO $item): self
+    public function addToMidocoSystemAttributeDefinition(\Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO) {
-            throw new InvalidArgumentException(sprintf('The MidocoSystemAttributeDefinition property can only contain items of type \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition) {
+            throw new InvalidArgumentException(sprintf('The MidocoSystemAttributeDefinition property can only contain items of type \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->MidocoSystemAttributeDefinition[] = $item;
         

@@ -20,9 +20,9 @@ class ImportRawCustomerRequest extends AbstractStructBase
      * - maxOccurs: 1
      * - minOccurs: 1
      * - ref: MidocoCrmCustomer
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
      */
-    protected \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $MidocoCrmCustomer;
+    protected \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $MidocoCrmCustomer;
     /**
      * The MidocoCrmAddress
      * Meta information extracted from the WSDL
@@ -294,7 +294,7 @@ class ImportRawCustomerRequest extends AbstractStructBase
      * @uses ImportRawCustomerRequest::setUpdateCustInfo()
      * @uses ImportRawCustomerRequest::setMatchOnlyCustomerId()
      * @uses ImportRawCustomerRequest::setUseExtRefIdInSearch()
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmAddress[] $midocoCrmAddress
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoContactEntryType[] $midocoContactEntry
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCcCard[] $midocoCrmCcCard
@@ -325,7 +325,7 @@ class ImportRawCustomerRequest extends AbstractStructBase
      * @param bool $matchOnlyCustomerId
      * @param bool $useExtRefIdInSearch
      */
-    public function __construct(\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer, ?array $midocoCrmAddress = null, ?array $midocoContactEntry = null, ?array $midocoCrmCcCard = null, ?array $midocoCrmDebitCard = null, ?array $midocoCrmBonusCard = null, ?array $midocoCrmCriteria = null, ?array $midocoCrmNotice = null, ?array $midocoContactHistory = null, ?array $midocoAssignCustomer = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomerPayment $midocoCrmCustomerPayment = null, ?array $midocoCustomerTravel = null, ?array $midocoCrmPersonTraveller = null, ?\Pggns\MidocoApi\Crm\StructType\DebitorDTO $midocoDebitor = null, ?array $midocoFrequentFlyerNumber = null, ?array $midocoMandate = null, ?array $midocoCustomerMf = null, ?\Pggns\MidocoApi\Crm\StructType\AgencyProperties $agencyProperties = null, ?\Pggns\MidocoApi\Crm\StructType\AgencyDetailDTO $saveMidocoAgencyDetails = null, ?bool $collectiveInvoice = null, ?array $midocoAgencyCommission = null, ?array $midocoAgencyCooperationHistory = null, ?array $customerCommissionId = null, ?bool $useDebitorNoInSearch = null, ?bool $useEmailInSearch = null, ?bool $setDefaultContact = null, ?bool $onlyNew = false, ?bool $updateCustInfo = false, ?bool $matchOnlyCustomerId = false, ?bool $useExtRefIdInSearch = false)
+    public function __construct(\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer, ?array $midocoCrmAddress = null, ?array $midocoContactEntry = null, ?array $midocoCrmCcCard = null, ?array $midocoCrmDebitCard = null, ?array $midocoCrmBonusCard = null, ?array $midocoCrmCriteria = null, ?array $midocoCrmNotice = null, ?array $midocoContactHistory = null, ?array $midocoAssignCustomer = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomerPayment $midocoCrmCustomerPayment = null, ?array $midocoCustomerTravel = null, ?array $midocoCrmPersonTraveller = null, ?\Pggns\MidocoApi\Crm\StructType\DebitorDTO $midocoDebitor = null, ?array $midocoFrequentFlyerNumber = null, ?array $midocoMandate = null, ?array $midocoCustomerMf = null, ?\Pggns\MidocoApi\Crm\StructType\AgencyProperties $agencyProperties = null, ?\Pggns\MidocoApi\Crm\StructType\AgencyDetailDTO $saveMidocoAgencyDetails = null, ?bool $collectiveInvoice = null, ?array $midocoAgencyCommission = null, ?array $midocoAgencyCooperationHistory = null, ?array $customerCommissionId = null, ?bool $useDebitorNoInSearch = null, ?bool $useEmailInSearch = null, ?bool $setDefaultContact = null, ?bool $onlyNew = false, ?bool $updateCustInfo = false, ?bool $matchOnlyCustomerId = false, ?bool $useExtRefIdInSearch = false)
     {
         $this
             ->setMidocoCrmCustomer($midocoCrmCustomer)
@@ -361,18 +361,18 @@ class ImportRawCustomerRequest extends AbstractStructBase
     }
     /**
      * Get MidocoCrmCustomer value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
      */
-    public function getMidocoCrmCustomer(): \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+    public function getMidocoCrmCustomer(): \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
     {
         return $this->MidocoCrmCustomer;
     }
     /**
      * Set MidocoCrmCustomer value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @return \Pggns\MidocoApi\Crm\StructType\ImportRawCustomerRequest
      */
-    public function setMidocoCrmCustomer(\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer): self
+    public function setMidocoCrmCustomer(\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer): self
     {
         $this->MidocoCrmCustomer = $midocoCrmCustomer;
         

@@ -18,9 +18,9 @@ class GetIrisPlusExportStringRequest extends AbstractStructBase
      * The MidocoCrmCustomer
      * Meta information extracted from the WSDL
      * - ref: MidocoCrmCustomer
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $MidocoCrmCustomer = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $MidocoCrmCustomer = null;
     /**
      * The MidocoSelectedCrmPersonTraveller
      * Meta information extracted from the WSDL
@@ -62,14 +62,14 @@ class GetIrisPlusExportStringRequest extends AbstractStructBase
      * @uses GetIrisPlusExportStringRequest::setIsExportCustomer()
      * @uses GetIrisPlusExportStringRequest::setExportBirthday()
      * @uses GetIrisPlusExportStringRequest::setExportAge()
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoSelectedCrmPersonTraveller[] $midocoSelectedCrmPersonTraveller
      * @param bool $isNewConnected
      * @param bool $isExportCustomer
      * @param bool $exportBirthday
      * @param bool $exportAge
      */
-    public function __construct(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer = null, ?array $midocoSelectedCrmPersonTraveller = null, ?bool $isNewConnected = false, ?bool $isExportCustomer = false, ?bool $exportBirthday = null, ?bool $exportAge = null)
+    public function __construct(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer = null, ?array $midocoSelectedCrmPersonTraveller = null, ?bool $isNewConnected = false, ?bool $isExportCustomer = false, ?bool $exportBirthday = null, ?bool $exportAge = null)
     {
         $this
             ->setMidocoCrmCustomer($midocoCrmCustomer)
@@ -81,18 +81,18 @@ class GetIrisPlusExportStringRequest extends AbstractStructBase
     }
     /**
      * Get MidocoCrmCustomer value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer|null
      */
-    public function getMidocoCrmCustomer(): ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+    public function getMidocoCrmCustomer(): ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
     {
         return $this->MidocoCrmCustomer;
     }
     /**
      * Set MidocoCrmCustomer value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @return \Pggns\MidocoApi\Crm\StructType\GetIrisPlusExportStringRequest
      */
-    public function setMidocoCrmCustomer(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer = null): self
+    public function setMidocoCrmCustomer(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer = null): self
     {
         $this->MidocoCrmCustomer = $midocoCrmCustomer;
         

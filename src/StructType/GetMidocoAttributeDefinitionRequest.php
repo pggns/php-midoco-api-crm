@@ -18,9 +18,9 @@ class GetMidocoAttributeDefinitionRequest extends AbstractStructBase
      * The MidocoSystemAttributeDefinition
      * Meta information extracted from the WSDL
      * - ref: MidocoSystemAttributeDefinition
-     * @var \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO $MidocoSystemAttributeDefinition = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition $MidocoSystemAttributeDefinition = null;
     /**
      * The orgunit
      * @var string|null
@@ -30,10 +30,10 @@ class GetMidocoAttributeDefinitionRequest extends AbstractStructBase
      * Constructor method for GetMidocoAttributeDefinitionRequest
      * @uses GetMidocoAttributeDefinitionRequest::setMidocoSystemAttributeDefinition()
      * @uses GetMidocoAttributeDefinitionRequest::setOrgunit()
-     * @param \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO $midocoSystemAttributeDefinition
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition $midocoSystemAttributeDefinition
      * @param string $orgunit
      */
-    public function __construct(?\Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO $midocoSystemAttributeDefinition = null, ?string $orgunit = null)
+    public function __construct(?\Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition $midocoSystemAttributeDefinition = null, ?string $orgunit = null)
     {
         $this
             ->setMidocoSystemAttributeDefinition($midocoSystemAttributeDefinition)
@@ -41,18 +41,18 @@ class GetMidocoAttributeDefinitionRequest extends AbstractStructBase
     }
     /**
      * Get MidocoSystemAttributeDefinition value
-     * @return \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition|null
      */
-    public function getMidocoSystemAttributeDefinition(): ?\Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO
+    public function getMidocoSystemAttributeDefinition(): ?\Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition
     {
         return $this->MidocoSystemAttributeDefinition;
     }
     /**
      * Set MidocoSystemAttributeDefinition value
-     * @param \Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO $midocoSystemAttributeDefinition
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition $midocoSystemAttributeDefinition
      * @return \Pggns\MidocoApi\Crm\StructType\GetMidocoAttributeDefinitionRequest
      */
-    public function setMidocoSystemAttributeDefinition(?\Pggns\MidocoApi\Crm\StructType\AttributeDefinitionDTO $midocoSystemAttributeDefinition = null): self
+    public function setMidocoSystemAttributeDefinition(?\Pggns\MidocoApi\Crm\StructType\MidocoSystemAttributeDefinition $midocoSystemAttributeDefinition = null): self
     {
         $this->MidocoSystemAttributeDefinition = $midocoSystemAttributeDefinition;
         

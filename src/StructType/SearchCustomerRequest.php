@@ -19,9 +19,9 @@ class SearchCustomerRequest extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - minOccurs: 0
      * - ref: MidocoCrmCustomer
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $MidocoCrmCustomer = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $MidocoCrmCustomer = null;
     /**
      * The MidocoCrmSearchContact
      * Meta information extracted from the WSDL
@@ -111,6 +111,13 @@ class SearchCustomerRequest extends AbstractStructBase
      */
     protected ?string $creditCard = null;
     /**
+     * The doSearchExternalCustomer
+     * Meta information extracted from the WSDL
+     * - default: false
+     * @var bool|null
+     */
+    protected ?bool $doSearchExternalCustomer = null;
+    /**
      * Constructor method for SearchCustomerRequest
      * @uses SearchCustomerRequest::setMidocoCrmCustomer()
      * @uses SearchCustomerRequest::setMidocoCrmSearchContact()
@@ -128,7 +135,8 @@ class SearchCustomerRequest extends AbstractStructBase
      * @uses SearchCustomerRequest::setIncludeLockedCustomers()
      * @uses SearchCustomerRequest::setIban()
      * @uses SearchCustomerRequest::setCreditCard()
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @uses SearchCustomerRequest::setDoSearchExternalCustomer()
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @param \Pggns\MidocoApi\Crm\StructType\CrmSearchContactDTO $midocoCrmSearchContact
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoMediatorTravels $midocoMediatorTravels
      * @param int $maxReturned
@@ -144,8 +152,9 @@ class SearchCustomerRequest extends AbstractStructBase
      * @param bool $includeLockedCustomers
      * @param string $iban
      * @param string $creditCard
+     * @param bool $doSearchExternalCustomer
      */
-    public function __construct(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer = null, ?\Pggns\MidocoApi\Crm\StructType\CrmSearchContactDTO $midocoCrmSearchContact = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoMediatorTravels $midocoMediatorTravels = null, ?int $maxReturned = null, ?string $filter = 'NONE', ?string $profileNo = null, ?bool $includePassengers = false, ?string $criteriaType = null, ?string $criteriaValue = null, ?string $neighbourType = null, ?string $mandateReference = null, ?bool $calledFromOrder = false, ?bool $calledFromOrderUtils = false, ?bool $includeLockedCustomers = null, ?string $iban = null, ?string $creditCard = null)
+    public function __construct(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer = null, ?\Pggns\MidocoApi\Crm\StructType\CrmSearchContactDTO $midocoCrmSearchContact = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoMediatorTravels $midocoMediatorTravels = null, ?int $maxReturned = null, ?string $filter = 'NONE', ?string $profileNo = null, ?bool $includePassengers = false, ?string $criteriaType = null, ?string $criteriaValue = null, ?string $neighbourType = null, ?string $mandateReference = null, ?bool $calledFromOrder = false, ?bool $calledFromOrderUtils = false, ?bool $includeLockedCustomers = null, ?string $iban = null, ?string $creditCard = null, ?bool $doSearchExternalCustomer = false)
     {
         $this
             ->setMidocoCrmCustomer($midocoCrmCustomer)
@@ -163,22 +172,23 @@ class SearchCustomerRequest extends AbstractStructBase
             ->setCalledFromOrderUtils($calledFromOrderUtils)
             ->setIncludeLockedCustomers($includeLockedCustomers)
             ->setIban($iban)
-            ->setCreditCard($creditCard);
+            ->setCreditCard($creditCard)
+            ->setDoSearchExternalCustomer($doSearchExternalCustomer);
     }
     /**
      * Get MidocoCrmCustomer value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer|null
      */
-    public function getMidocoCrmCustomer(): ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+    public function getMidocoCrmCustomer(): ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
     {
         return $this->MidocoCrmCustomer;
     }
     /**
      * Set MidocoCrmCustomer value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @return \Pggns\MidocoApi\Crm\StructType\SearchCustomerRequest
      */
-    public function setMidocoCrmCustomer(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer = null): self
+    public function setMidocoCrmCustomer(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer = null): self
     {
         $this->MidocoCrmCustomer = $midocoCrmCustomer;
         
@@ -518,6 +528,29 @@ class SearchCustomerRequest extends AbstractStructBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($creditCard, true), gettype($creditCard)), __LINE__);
         }
         $this->creditCard = $creditCard;
+        
+        return $this;
+    }
+    /**
+     * Get doSearchExternalCustomer value
+     * @return bool|null
+     */
+    public function getDoSearchExternalCustomer(): ?bool
+    {
+        return $this->doSearchExternalCustomer;
+    }
+    /**
+     * Set doSearchExternalCustomer value
+     * @param bool $doSearchExternalCustomer
+     * @return \Pggns\MidocoApi\Crm\StructType\SearchCustomerRequest
+     */
+    public function setDoSearchExternalCustomer(?bool $doSearchExternalCustomer = false): self
+    {
+        // validation for constraint: boolean
+        if (!is_null($doSearchExternalCustomer) && !is_bool($doSearchExternalCustomer)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($doSearchExternalCustomer, true), gettype($doSearchExternalCustomer)), __LINE__);
+        }
+        $this->doSearchExternalCustomer = $doSearchExternalCustomer;
         
         return $this;
     }

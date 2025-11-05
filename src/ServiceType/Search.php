@@ -297,9 +297,36 @@ class Search extends AbstractSoapClientBase
         }
     }
     /**
+     * Method to call the operation originally named searchExternalCustomer
+     * Meta information extracted from the WSDL
+     * - SOAPHeaderNames: MidocoCredentials
+     * - SOAPHeaderNamespaces: http://www.midoco.de/system
+     * - SOAPHeaderTypes: \Pggns\MidocoApi\Crm\StructType\MidocoCredentialsType
+     * - SOAPHeaders: required
+     * @uses AbstractSoapClientBase::getSoapClient()
+     * @uses AbstractSoapClientBase::setResult()
+     * @uses AbstractSoapClientBase::saveLastError()
+     * @param \Pggns\MidocoApi\Crm\StructType\SearchExternalCustomerRequest $paramSearchExternalCustomerRequest
+     * @return \Pggns\MidocoApi\Crm\StructType\SearchExternalCustomerResponse|bool
+     */
+    public function searchExternalCustomer(\Pggns\MidocoApi\Crm\StructType\SearchExternalCustomerRequest $paramSearchExternalCustomerRequest)
+    {
+        try {
+            $this->setResult($resultSearchExternalCustomer = $this->getSoapClient()->__soapCall('searchExternalCustomer', [
+                $paramSearchExternalCustomerRequest,
+            ], [], [], $this->outputHeaders));
+        
+            return $resultSearchExternalCustomer;
+        } catch (SoapFault $soapFault) {
+            $this->saveLastError(__METHOD__, $soapFault);
+        
+            return false;
+        }
+    }
+    /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \Pggns\MidocoApi\Crm\StructType\SearchBankResponse|\Pggns\MidocoApi\Crm\StructType\SearchBlackListResponse|\Pggns\MidocoApi\Crm\StructType\SearchCrmExternalOfferResponse|\Pggns\MidocoApi\Crm\StructType\SearchCrmTravellersResponse|\Pggns\MidocoApi\Crm\StructType\SearchCustDoubleAddrResponse|\Pggns\MidocoApi\Crm\StructType\SearchCustomerByPhoneResponse|\Pggns\MidocoApi\Crm\StructType\SearchCustomerByTravelResponse|\Pggns\MidocoApi\Crm\StructType\SearchCustomerResponse|\Pggns\MidocoApi\Crm\StructType\SearchMidocoMandateResponse
+     * @return \Pggns\MidocoApi\Crm\StructType\SearchBankResponse|\Pggns\MidocoApi\Crm\StructType\SearchBlackListResponse|\Pggns\MidocoApi\Crm\StructType\SearchCrmExternalOfferResponse|\Pggns\MidocoApi\Crm\StructType\SearchCrmTravellersResponse|\Pggns\MidocoApi\Crm\StructType\SearchCustDoubleAddrResponse|\Pggns\MidocoApi\Crm\StructType\SearchCustomerByPhoneResponse|\Pggns\MidocoApi\Crm\StructType\SearchCustomerByTravelResponse|\Pggns\MidocoApi\Crm\StructType\SearchCustomerResponse|\Pggns\MidocoApi\Crm\StructType\SearchExternalCustomerResponse|\Pggns\MidocoApi\Crm\StructType\SearchMidocoMandateResponse
      */
     public function getResult()
     {

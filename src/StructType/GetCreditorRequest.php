@@ -9,6 +9,8 @@ use WsdlToPhp\PackageBase\AbstractStructBase;
 
 /**
  * This class stands for GetCreditorRequest StructType
+ * Meta information extracted from the WSDL
+ * - documentation: Get a creditor either by creditorNo or customerId.<br> If both are provided, only the creditorNo is used.<br> If none is provided, the response will be empty.<br> If no creditor is found, the response will be empty.
  * @subpackage Structs
  */
 #[\AllowDynamicProperties]

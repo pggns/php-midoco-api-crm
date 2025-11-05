@@ -411,6 +411,14 @@ if ($save->saveVirtualCcCard(new \Pggns\MidocoApi\Crm\StructType\SaveVirtualCcCa
     print_r($save->getLastError());
 }
 /**
+ * Sample call for saveExternalCustomerInfo operation/method
+ */
+if ($save->saveExternalCustomerInfo(new \Pggns\MidocoApi\Crm\StructType\SaveExternalCustomerInfoRequest()) !== false) {
+    print_r($save->getResult());
+} else {
+    print_r($save->getLastError());
+}
+/**
  * Samples for Get ServiceType
  */
 $get = new \Pggns\MidocoApi\Crm\ServiceType\Get($options);
@@ -1400,6 +1408,14 @@ if ($search->searchCustomerByPhone(new \Pggns\MidocoApi\Crm\StructType\SearchCus
  * Sample call for searchCrmExternalOffer operation/method
  */
 if ($search->searchCrmExternalOffer(new \Pggns\MidocoApi\Crm\StructType\SearchCrmExternalOfferRequest()) !== false) {
+    print_r($search->getResult());
+} else {
+    print_r($search->getLastError());
+}
+/**
+ * Sample call for searchExternalCustomer operation/method
+ */
+if ($search->searchExternalCustomer(new \Pggns\MidocoApi\Crm\StructType\SearchExternalCustomerRequest()) !== false) {
     print_r($search->getResult());
 } else {
     print_r($search->getLastError());

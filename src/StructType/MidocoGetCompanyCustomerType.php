@@ -18,24 +18,24 @@ class MidocoGetCompanyCustomerType extends AbstractStructBase
      * The MidocoCrmCustomer
      * Meta information extracted from the WSDL
      * - ref: MidocoCrmCustomer
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $MidocoCrmCustomer = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $MidocoCrmCustomer = null;
     /**
      * The MidocoCrmCompany
      * Meta information extracted from the WSDL
      * - ref: MidocoCrmCompany
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $MidocoCrmCompany = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $MidocoCrmCompany = null;
     /**
      * Constructor method for MidocoGetCompanyCustomerType
      * @uses MidocoGetCompanyCustomerType::setMidocoCrmCustomer()
      * @uses MidocoGetCompanyCustomerType::setMidocoCrmCompany()
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $midocoCrmCompany
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $midocoCrmCompany
      */
-    public function __construct(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer = null, ?\Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $midocoCrmCompany = null)
+    public function __construct(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $midocoCrmCompany = null)
     {
         $this
             ->setMidocoCrmCustomer($midocoCrmCustomer)
@@ -43,18 +43,18 @@ class MidocoGetCompanyCustomerType extends AbstractStructBase
     }
     /**
      * Get MidocoCrmCustomer value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer|null
      */
-    public function getMidocoCrmCustomer(): ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+    public function getMidocoCrmCustomer(): ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
     {
         return $this->MidocoCrmCustomer;
     }
     /**
      * Set MidocoCrmCustomer value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @return \Pggns\MidocoApi\Crm\StructType\MidocoGetCompanyCustomerType
      */
-    public function setMidocoCrmCustomer(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer = null): self
+    public function setMidocoCrmCustomer(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer = null): self
     {
         $this->MidocoCrmCustomer = $midocoCrmCustomer;
         
@@ -62,18 +62,18 @@ class MidocoGetCompanyCustomerType extends AbstractStructBase
     }
     /**
      * Get MidocoCrmCompany value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany|null
      */
-    public function getMidocoCrmCompany(): ?\Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO
+    public function getMidocoCrmCompany(): ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany
     {
         return $this->MidocoCrmCompany;
     }
     /**
      * Set MidocoCrmCompany value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $midocoCrmCompany
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $midocoCrmCompany
      * @return \Pggns\MidocoApi\Crm\StructType\MidocoGetCompanyCustomerType
      */
-    public function setMidocoCrmCompany(?\Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $midocoCrmCompany = null): self
+    public function setMidocoCrmCompany(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $midocoCrmCompany = null): self
     {
         $this->MidocoCrmCompany = $midocoCrmCompany;
         

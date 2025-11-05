@@ -28,9 +28,9 @@ class GetJsonUrlForTrafficsCosmonautStringRequest extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - minOccurs: 0
      * - ref: MidocoCrmCustomer
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $MidocoCrmCustomer = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $MidocoCrmCustomer = null;
     /**
      * The MidocoSelectedCrmPersonTraveller
      * Meta information extracted from the WSDL
@@ -56,11 +56,11 @@ class GetJsonUrlForTrafficsCosmonautStringRequest extends AbstractStructBase
      * @uses GetJsonUrlForTrafficsCosmonautStringRequest::setMidocoSelectedCrmPersonTraveller()
      * @uses GetJsonUrlForTrafficsCosmonautStringRequest::setMidocoCustomerTravel()
      * @param \Pggns\MidocoApi\Crm\StructType\CustomerIdDTO $midocoCustomerId
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoSelectedCrmPersonTraveller[] $midocoSelectedCrmPersonTraveller
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoCustomerTravelType[] $midocoCustomerTravel
      */
-    public function __construct(\Pggns\MidocoApi\Crm\StructType\CustomerIdDTO $midocoCustomerId, ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer = null, ?array $midocoSelectedCrmPersonTraveller = null, ?array $midocoCustomerTravel = null)
+    public function __construct(\Pggns\MidocoApi\Crm\StructType\CustomerIdDTO $midocoCustomerId, ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer = null, ?array $midocoSelectedCrmPersonTraveller = null, ?array $midocoCustomerTravel = null)
     {
         $this
             ->setMidocoCustomerId($midocoCustomerId)
@@ -89,18 +89,18 @@ class GetJsonUrlForTrafficsCosmonautStringRequest extends AbstractStructBase
     }
     /**
      * Get MidocoCrmCustomer value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer|null
      */
-    public function getMidocoCrmCustomer(): ?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+    public function getMidocoCrmCustomer(): ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
     {
         return $this->MidocoCrmCustomer;
     }
     /**
      * Set MidocoCrmCustomer value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @return \Pggns\MidocoApi\Crm\StructType\GetJsonUrlForTrafficsCosmonautStringRequest
      */
-    public function setMidocoCrmCustomer(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer = null): self
+    public function setMidocoCrmCustomer(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer = null): self
     {
         $this->MidocoCrmCustomer = $midocoCrmCustomer;
         

@@ -200,11 +200,6 @@ class MidocoImportCustomer extends AbstractStructBase
      */
     protected ?string $concernId = null;
     /**
-     * The bankEinzug
-     * @var string|null
-     */
-    protected ?string $bankEinzug = null;
-    /**
      * The invoiceSignature
      * @var string|null
      */
@@ -313,7 +308,6 @@ class MidocoImportCustomer extends AbstractStructBase
      * @uses MidocoImportCustomer::setChargesGroup()
      * @uses MidocoImportCustomer::setCreditLimit()
      * @uses MidocoImportCustomer::setConcernId()
-     * @uses MidocoImportCustomer::setBankEinzug()
      * @uses MidocoImportCustomer::setInvoiceSignature()
      * @uses MidocoImportCustomer::setVatId()
      * @uses MidocoImportCustomer::setVatLiability()
@@ -365,7 +359,6 @@ class MidocoImportCustomer extends AbstractStructBase
      * @param string $chargesGroup
      * @param string $creditLimit
      * @param string $concernId
-     * @param string $bankEinzug
      * @param string $invoiceSignature
      * @param string $vatId
      * @param string $vatLiability
@@ -381,7 +374,7 @@ class MidocoImportCustomer extends AbstractStructBase
      * @param string $paymentConditionId
      * @param bool $hasBtContract
      */
-    public function __construct(?string $customerId = null, ?string $company = null, ?string $anrede = null, ?string $titel = null, ?string $rufname = null, ?string $weitereVornamen = null, ?string $nachname = null, ?string $namenszusatz = null, ?string $contactPerson = null, ?string $briefanrede = null, ?string $sortierfeld = null, ?string $beruf = null, ?string $abteilung = null, ?string $kostenstelle = null, ?string $adresszeile1 = null, ?string $adresszeile2 = null, ?string $strasse = null, ?string $hausnr = null, ?string $zusatz = null, ?string $postfach = null, ?string $plz = null, ?string $ort = null, ?string $land = null, ?string $email = null, ?string $orgUnit = null, ?string $tel = null, ?string $fax = null, ?string $handyPrivate = null, ?string $handBusiness = null, ?string $birthday = null, ?string $geburtsname = null, ?string $geschlecht = null, ?string $sprache = null, ?string $debitorNo = null, ?string $chargesGroup = null, ?string $creditLimit = null, ?string $concernId = null, ?string $bankEinzug = null, ?string $invoiceSignature = null, ?string $vatId = null, ?string $vatLiability = null, ?string $handelsregister = null, ?string $passNo = null, ?string $passValid = null, ?string $passIssued = null, ?string $personalNo = null, ?bool $mailingProhibited = null, ?string $mediatorId = null, ?string $mediatorType = null, ?string $paymentDelay = null, ?string $paymentConditionId = null, ?bool $hasBtContract = null)
+    public function __construct(?string $customerId = null, ?string $company = null, ?string $anrede = null, ?string $titel = null, ?string $rufname = null, ?string $weitereVornamen = null, ?string $nachname = null, ?string $namenszusatz = null, ?string $contactPerson = null, ?string $briefanrede = null, ?string $sortierfeld = null, ?string $beruf = null, ?string $abteilung = null, ?string $kostenstelle = null, ?string $adresszeile1 = null, ?string $adresszeile2 = null, ?string $strasse = null, ?string $hausnr = null, ?string $zusatz = null, ?string $postfach = null, ?string $plz = null, ?string $ort = null, ?string $land = null, ?string $email = null, ?string $orgUnit = null, ?string $tel = null, ?string $fax = null, ?string $handyPrivate = null, ?string $handBusiness = null, ?string $birthday = null, ?string $geburtsname = null, ?string $geschlecht = null, ?string $sprache = null, ?string $debitorNo = null, ?string $chargesGroup = null, ?string $creditLimit = null, ?string $concernId = null, ?string $invoiceSignature = null, ?string $vatId = null, ?string $vatLiability = null, ?string $handelsregister = null, ?string $passNo = null, ?string $passValid = null, ?string $passIssued = null, ?string $personalNo = null, ?bool $mailingProhibited = null, ?string $mediatorId = null, ?string $mediatorType = null, ?string $paymentDelay = null, ?string $paymentConditionId = null, ?bool $hasBtContract = null)
     {
         $this
             ->setCustomerId($customerId)
@@ -421,7 +414,6 @@ class MidocoImportCustomer extends AbstractStructBase
             ->setChargesGroup($chargesGroup)
             ->setCreditLimit($creditLimit)
             ->setConcernId($concernId)
-            ->setBankEinzug($bankEinzug)
             ->setInvoiceSignature($invoiceSignature)
             ->setVatId($vatId)
             ->setVatLiability($vatLiability)
@@ -1285,29 +1277,6 @@ class MidocoImportCustomer extends AbstractStructBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($concernId, true), gettype($concernId)), __LINE__);
         }
         $this->concernId = $concernId;
-        
-        return $this;
-    }
-    /**
-     * Get bankEinzug value
-     * @return string|null
-     */
-    public function getBankEinzug(): ?string
-    {
-        return $this->bankEinzug;
-    }
-    /**
-     * Set bankEinzug value
-     * @param string $bankEinzug
-     * @return \Pggns\MidocoApi\Crm\StructType\MidocoImportCustomer
-     */
-    public function setBankEinzug(?string $bankEinzug = null): self
-    {
-        // validation for constraint: string
-        if (!is_null($bankEinzug) && !is_string($bankEinzug)) {
-            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($bankEinzug, true), gettype($bankEinzug)), __LINE__);
-        }
-        $this->bankEinzug = $bankEinzug;
         
         return $this;
     }

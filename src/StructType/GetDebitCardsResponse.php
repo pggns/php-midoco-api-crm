@@ -40,18 +40,18 @@ class GetDebitCardsResponse extends AbstractStructBase
      * - maxOccurs: 1
      * - minOccurs: 0
      * - ref: MidocoCrmCompany
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $MidocoCrmCompany = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $MidocoCrmCompany = null;
     /**
      * The MidocoCrmPerson
      * Meta information extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
      * - ref: MidocoCrmPerson
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmPersonDTO|null
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmPerson|null
      */
-    protected ?\Pggns\MidocoApi\Crm\StructType\CrmPersonDTO $MidocoCrmPerson = null;
+    protected ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmPerson $MidocoCrmPerson = null;
     /**
      * The MidocoContactEntry
      * Meta information extracted from the WSDL
@@ -85,13 +85,13 @@ class GetDebitCardsResponse extends AbstractStructBase
      * @uses GetDebitCardsResponse::setSalutationId()
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmDebitCard[] $midocoCrmDebitCard
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmAddress[] $midocoCrmAddress
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $midocoCrmCompany
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmPersonDTO $midocoCrmPerson
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $midocoCrmCompany
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmPerson $midocoCrmPerson
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoContactEntryType[] $midocoContactEntry
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoMandate $midocoMandate
      * @param string $salutationId
      */
-    public function __construct(?array $midocoCrmDebitCard = null, ?array $midocoCrmAddress = null, ?\Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $midocoCrmCompany = null, ?\Pggns\MidocoApi\Crm\StructType\CrmPersonDTO $midocoCrmPerson = null, ?array $midocoContactEntry = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoMandate $midocoMandate = null, ?string $salutationId = null)
+    public function __construct(?array $midocoCrmDebitCard = null, ?array $midocoCrmAddress = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $midocoCrmCompany = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmPerson $midocoCrmPerson = null, ?array $midocoContactEntry = null, ?\Pggns\MidocoApi\Crm\StructType\MidocoMandate $midocoMandate = null, ?string $salutationId = null)
     {
         $this
             ->setMidocoCrmDebitCard($midocoCrmDebitCard)
@@ -238,18 +238,18 @@ class GetDebitCardsResponse extends AbstractStructBase
     }
     /**
      * Get MidocoCrmCompany value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany|null
      */
-    public function getMidocoCrmCompany(): ?\Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO
+    public function getMidocoCrmCompany(): ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany
     {
         return $this->MidocoCrmCompany;
     }
     /**
      * Set MidocoCrmCompany value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $midocoCrmCompany
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $midocoCrmCompany
      * @return \Pggns\MidocoApi\Crm\StructType\GetDebitCardsResponse
      */
-    public function setMidocoCrmCompany(?\Pggns\MidocoApi\Crm\StructType\CrmCompanyDTO $midocoCrmCompany = null): self
+    public function setMidocoCrmCompany(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmCompany $midocoCrmCompany = null): self
     {
         $this->MidocoCrmCompany = $midocoCrmCompany;
         
@@ -257,18 +257,18 @@ class GetDebitCardsResponse extends AbstractStructBase
     }
     /**
      * Get MidocoCrmPerson value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmPersonDTO|null
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmPerson|null
      */
-    public function getMidocoCrmPerson(): ?\Pggns\MidocoApi\Crm\StructType\CrmPersonDTO
+    public function getMidocoCrmPerson(): ?\Pggns\MidocoApi\Crm\StructType\MidocoCrmPerson
     {
         return $this->MidocoCrmPerson;
     }
     /**
      * Set MidocoCrmPerson value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmPersonDTO $midocoCrmPerson
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmPerson $midocoCrmPerson
      * @return \Pggns\MidocoApi\Crm\StructType\GetDebitCardsResponse
      */
-    public function setMidocoCrmPerson(?\Pggns\MidocoApi\Crm\StructType\CrmPersonDTO $midocoCrmPerson = null): self
+    public function setMidocoCrmPerson(?\Pggns\MidocoApi\Crm\StructType\MidocoCrmPerson $midocoCrmPerson = null): self
     {
         $this->MidocoCrmPerson = $midocoCrmPerson;
         

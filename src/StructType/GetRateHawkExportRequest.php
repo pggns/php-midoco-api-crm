@@ -28,9 +28,9 @@ class GetRateHawkExportRequest extends AbstractStructBase
      * - maxOccurs: 1
      * - minOccurs: 1
      * - ref: MidocoCrmCustomer
-     * @var \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+     * @var \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
      */
-    protected \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $MidocoCrmCustomer;
+    protected \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $MidocoCrmCustomer;
     /**
      * The MidocoSelectedCrmPersonTraveller
      * Meta information extracted from the WSDL
@@ -58,12 +58,12 @@ class GetRateHawkExportRequest extends AbstractStructBase
      * @uses GetRateHawkExportRequest::setExportBirthday()
      * @uses GetRateHawkExportRequest::setExportAge()
      * @param string $action
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoSelectedCrmPersonTraveller[] $midocoSelectedCrmPersonTraveller
      * @param bool $exportBirthday
      * @param bool $exportAge
      */
-    public function __construct(string $action, \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer, ?array $midocoSelectedCrmPersonTraveller = null, ?bool $exportBirthday = null, ?bool $exportAge = null)
+    public function __construct(string $action, \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer, ?array $midocoSelectedCrmPersonTraveller = null, ?bool $exportBirthday = null, ?bool $exportAge = null)
     {
         $this
             ->setAction($action)
@@ -100,18 +100,18 @@ class GetRateHawkExportRequest extends AbstractStructBase
     }
     /**
      * Get MidocoCrmCustomer value
-     * @return \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
      */
-    public function getMidocoCrmCustomer(): \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO
+    public function getMidocoCrmCustomer(): \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer
     {
         return $this->MidocoCrmCustomer;
     }
     /**
      * Set MidocoCrmCustomer value
-     * @param \Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer
+     * @param \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer
      * @return \Pggns\MidocoApi\Crm\StructType\GetRateHawkExportRequest
      */
-    public function setMidocoCrmCustomer(\Pggns\MidocoApi\Crm\StructType\CrmCustomerDTO $midocoCrmCustomer): self
+    public function setMidocoCrmCustomer(\Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomer $midocoCrmCustomer): self
     {
         $this->MidocoCrmCustomer = $midocoCrmCustomer;
         

@@ -114,6 +114,19 @@ class MidocoMailMessageType extends AbstractStructBase
      */
     protected ?int $mailQueueId = null;
     /**
+     * The output
+     * @var string|null
+     */
+    protected ?string $output = null;
+    /**
+     * The ignoreOrgunitMailSignature
+     * Meta information extracted from the WSDL
+     * - documentation: to ignore mail signature text in system unit email signature
+     * - default: false
+     * @var bool|null
+     */
+    protected ?bool $ignoreOrgunitMailSignature = null;
+    /**
      * Constructor method for MidocoMailMessageType
      * @uses MidocoMailMessageType::setTo()
      * @uses MidocoMailMessageType::setFrom()
@@ -129,6 +142,8 @@ class MidocoMailMessageType extends AbstractStructBase
      * @uses MidocoMailMessageType::setDontMail()
      * @uses MidocoMailMessageType::setMailRelay()
      * @uses MidocoMailMessageType::setMailQueueId()
+     * @uses MidocoMailMessageType::setOutput()
+     * @uses MidocoMailMessageType::setIgnoreOrgunitMailSignature()
      * @param string[] $to
      * @param string $from
      * @param string[] $cc
@@ -143,8 +158,10 @@ class MidocoMailMessageType extends AbstractStructBase
      * @param bool $dontMail
      * @param string $mailRelay
      * @param int $mailQueueId
+     * @param string $output
+     * @param bool $ignoreOrgunitMailSignature
      */
-    public function __construct(?array $to = null, ?string $from = null, ?array $cc = null, ?array $bcc = null, ?string $subject = null, ?string $text = null, ?string $replyTo = null, ?string $htmlContent = null, ?array $midocoMailAttachment = null, ?array $midocoMailHeader = null, ?int $externDocumentId = null, ?bool $dontMail = false, ?string $mailRelay = null, ?int $mailQueueId = null)
+    public function __construct(?array $to = null, ?string $from = null, ?array $cc = null, ?array $bcc = null, ?string $subject = null, ?string $text = null, ?string $replyTo = null, ?string $htmlContent = null, ?array $midocoMailAttachment = null, ?array $midocoMailHeader = null, ?int $externDocumentId = null, ?bool $dontMail = false, ?string $mailRelay = null, ?int $mailQueueId = null, ?string $output = null, ?bool $ignoreOrgunitMailSignature = false)
     {
         $this
             ->setTo($to)
@@ -160,7 +177,9 @@ class MidocoMailMessageType extends AbstractStructBase
             ->setExternDocumentId($externDocumentId)
             ->setDontMail($dontMail)
             ->setMailRelay($mailRelay)
-            ->setMailQueueId($mailQueueId);
+            ->setMailQueueId($mailQueueId)
+            ->setOutput($output)
+            ->setIgnoreOrgunitMailSignature($ignoreOrgunitMailSignature);
     }
     /**
      * Get To value
@@ -701,6 +720,52 @@ class MidocoMailMessageType extends AbstractStructBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($mailQueueId, true), gettype($mailQueueId)), __LINE__);
         }
         $this->mailQueueId = $mailQueueId;
+        
+        return $this;
+    }
+    /**
+     * Get output value
+     * @return string|null
+     */
+    public function getOutput(): ?string
+    {
+        return $this->output;
+    }
+    /**
+     * Set output value
+     * @param string $output
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoMailMessageType
+     */
+    public function setOutput(?string $output = null): self
+    {
+        // validation for constraint: string
+        if (!is_null($output) && !is_string($output)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($output, true), gettype($output)), __LINE__);
+        }
+        $this->output = $output;
+        
+        return $this;
+    }
+    /**
+     * Get ignoreOrgunitMailSignature value
+     * @return bool|null
+     */
+    public function getIgnoreOrgunitMailSignature(): ?bool
+    {
+        return $this->ignoreOrgunitMailSignature;
+    }
+    /**
+     * Set ignoreOrgunitMailSignature value
+     * @param bool $ignoreOrgunitMailSignature
+     * @return \Pggns\MidocoApi\Crm\StructType\MidocoMailMessageType
+     */
+    public function setIgnoreOrgunitMailSignature(?bool $ignoreOrgunitMailSignature = false): self
+    {
+        // validation for constraint: boolean
+        if (!is_null($ignoreOrgunitMailSignature) && !is_bool($ignoreOrgunitMailSignature)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($ignoreOrgunitMailSignature, true), gettype($ignoreOrgunitMailSignature)), __LINE__);
+        }
+        $this->ignoreOrgunitMailSignature = $ignoreOrgunitMailSignature;
         
         return $this;
     }

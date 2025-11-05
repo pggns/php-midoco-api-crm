@@ -27,17 +27,25 @@ class GetVirtualCcCardRequest extends AbstractStructBase
      */
     protected ?bool $isActive = null;
     /**
+     * The maxRecords
+     * @var int|null
+     */
+    protected ?int $maxRecords = null;
+    /**
      * Constructor method for GetVirtualCcCardRequest
      * @uses GetVirtualCcCardRequest::setMidocoVirtualCcCard()
      * @uses GetVirtualCcCardRequest::setIsActive()
+     * @uses GetVirtualCcCardRequest::setMaxRecords()
      * @param \Pggns\MidocoApi\Crm\StructType\MidocoVirtualCcCard $midocoVirtualCcCard
      * @param bool $isActive
+     * @param int $maxRecords
      */
-    public function __construct(?\Pggns\MidocoApi\Crm\StructType\MidocoVirtualCcCard $midocoVirtualCcCard = null, ?bool $isActive = null)
+    public function __construct(?\Pggns\MidocoApi\Crm\StructType\MidocoVirtualCcCard $midocoVirtualCcCard = null, ?bool $isActive = null, ?int $maxRecords = null)
     {
         $this
             ->setMidocoVirtualCcCard($midocoVirtualCcCard)
-            ->setIsActive($isActive);
+            ->setIsActive($isActive)
+            ->setMaxRecords($maxRecords);
     }
     /**
      * Get MidocoVirtualCcCard value
@@ -78,6 +86,29 @@ class GetVirtualCcCardRequest extends AbstractStructBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($isActive, true), gettype($isActive)), __LINE__);
         }
         $this->isActive = $isActive;
+        
+        return $this;
+    }
+    /**
+     * Get maxRecords value
+     * @return int|null
+     */
+    public function getMaxRecords(): ?int
+    {
+        return $this->maxRecords;
+    }
+    /**
+     * Set maxRecords value
+     * @param int $maxRecords
+     * @return \Pggns\MidocoApi\Crm\StructType\GetVirtualCcCardRequest
+     */
+    public function setMaxRecords(?int $maxRecords = null): self
+    {
+        // validation for constraint: int
+        if (!is_null($maxRecords) && !(is_int($maxRecords) || ctype_digit($maxRecords))) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($maxRecords, true), gettype($maxRecords)), __LINE__);
+        }
+        $this->maxRecords = $maxRecords;
         
         return $this;
     }

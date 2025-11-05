@@ -8,10 +8,10 @@ use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
 /**
- * This class stands for DeleteVirtualCcCardResponse StructType
+ * This class stands for DeleteUmbrellaSettlementMonthResponse StructType
  * @subpackage Structs
  */
 #[\AllowDynamicProperties]
-class DeleteVirtualCcCardResponse extends AbstractStructBase
+class DeleteUmbrellaSettlementMonthResponse extends AbstractStructBase
 {
 }

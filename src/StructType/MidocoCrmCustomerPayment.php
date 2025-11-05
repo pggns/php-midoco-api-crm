@@ -38,11 +38,6 @@ class MidocoCrmCustomerPayment extends CrmCustomerPaymentDTO
      */
     protected ?string $diverseDebitor = null;
     /**
-     * The bankTransfer
-     * @var bool|null
-     */
-    protected ?bool $bankTransfer = null;
-    /**
      * The makeNewOrder
      * @var bool|null
      */
@@ -68,7 +63,6 @@ class MidocoCrmCustomerPayment extends CrmCustomerPaymentDTO
      * @uses MidocoCrmCustomerPayment::setAssignedDebitor()
      * @uses MidocoCrmCustomerPayment::setAssignedCreditor()
      * @uses MidocoCrmCustomerPayment::setDiverseDebitor()
-     * @uses MidocoCrmCustomerPayment::setBankTransfer()
      * @uses MidocoCrmCustomerPayment::setMakeNewOrder()
      * @uses MidocoCrmCustomerPayment::setExistDebitCards()
      * @uses MidocoCrmCustomerPayment::setCurrency()
@@ -77,20 +71,18 @@ class MidocoCrmCustomerPayment extends CrmCustomerPaymentDTO
      * @param string $assignedDebitor
      * @param string $assignedCreditor
      * @param string $diverseDebitor
-     * @param bool $bankTransfer
      * @param bool $makeNewOrder
      * @param bool $existDebitCards
      * @param string $currency
      * @param string $vatType
      */
-    public function __construct(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerEinvoiceDTO $customerEInvoiceSetting = null, ?string $assignedDebitor = null, ?string $assignedCreditor = null, ?string $diverseDebitor = null, ?bool $bankTransfer = null, ?bool $makeNewOrder = null, ?bool $existDebitCards = null, ?string $currency = null, ?string $vatType = null)
+    public function __construct(?\Pggns\MidocoApi\Crm\StructType\CrmCustomerEinvoiceDTO $customerEInvoiceSetting = null, ?string $assignedDebitor = null, ?string $assignedCreditor = null, ?string $diverseDebitor = null, ?bool $makeNewOrder = null, ?bool $existDebitCards = null, ?string $currency = null, ?string $vatType = null)
     {
         $this
             ->setCustomerEInvoiceSetting($customerEInvoiceSetting)
             ->setAssignedDebitor($assignedDebitor)
             ->setAssignedCreditor($assignedCreditor)
             ->setDiverseDebitor($diverseDebitor)
-            ->setBankTransfer($bankTransfer)
             ->setMakeNewOrder($makeNewOrder)
             ->setExistDebitCards($existDebitCards)
             ->setCurrency($currency)
@@ -181,29 +173,6 @@ class MidocoCrmCustomerPayment extends CrmCustomerPaymentDTO
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($diverseDebitor, true), gettype($diverseDebitor)), __LINE__);
         }
         $this->diverseDebitor = $diverseDebitor;
-        
-        return $this;
-    }
-    /**
-     * Get bankTransfer value
-     * @return bool|null
-     */
-    public function getBankTransfer(): ?bool
-    {
-        return $this->bankTransfer;
-    }
-    /**
-     * Set bankTransfer value
-     * @param bool $bankTransfer
-     * @return \Pggns\MidocoApi\Crm\StructType\MidocoCrmCustomerPayment
-     */
-    public function setBankTransfer(?bool $bankTransfer = null): self
-    {
-        // validation for constraint: boolean
-        if (!is_null($bankTransfer) && !is_bool($bankTransfer)) {
-            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($bankTransfer, true), gettype($bankTransfer)), __LINE__);
-        }
-        $this->bankTransfer = $bankTransfer;
         
         return $this;
     }
